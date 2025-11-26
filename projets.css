@@ -1,0 +1,374 @@
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    height: 0.75em;
+    width: 0.75em;
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #A57D5B;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(250, 250, 250, 0.75);
+}
+
+body {
+    background-color: rgb(237, 231, 231);
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+    font-size: 4rem !important;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+}
+
+p, a, button  {
+    font-family: "EB Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3rem !important;
+}
+
+.logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 5;
+}
+
+.button:hover {
+    background-color: #A57D5B;
+    border: solid white 1px;
+}
+
+/*Accueil
+Navigation*/
+nav {
+    top: 2%;
+    z-index: 3;
+    width: 25%;
+    height: 6%;
+    background-color: #40271C;
+    border-radius: 25px;
+    position: fixed;
+    left: 37.95%;
+}
+
+nav .bordure {
+    border: solid white 1px;
+    width: 98%;
+    height: 85%;
+    margin: 1%;
+    padding: 1%;
+    top: 0%;
+    LEFT: 0%;
+    position: absolute;
+    border-radius: 21px;
+    z-index: 3;
+}
+
+ul {
+    list-style-type: none !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1%;
+    position: relative;
+    margin: 0;
+}
+
+li a {
+    text-decoration: none;
+    color: white !important;
+}
+
+li a:hover {
+    color: #A57D5B !important;
+    text-decoration: solid underline;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+li a span {
+    color: #765232 !important;
+    font-weight: bold;
+}
+
+/*footer*/
+.fin {
+    background-color: #5b311f;
+    color: white;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 20em;
+    margin-top: 4em;
+}
+
+.bordure3 {
+    border: solid white 1px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    column-count: 2;
+}
+
+.bordure3 h5 {
+    position: relative;
+    display: flex;
+    font-size: 3.4em !important;
+    margin-top: 1.5%;
+    margin-left: 7%;
+    color: white;
+}
+
+.bordure3 p {
+    align-items: center;
+    display: flex;
+    margin-left: 2%;
+    margin-top: 2.5%;
+    text-shadow: #000000 2px 2px;
+}
+
+.rs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+    margin-left: 45% !important;
+    margin-top: 5%;
+}
+
+.titre {
+    margin-top: 5%;
+}
+
+main {
+    padding-top: 2%;
+}
+
+.projets {
+    margin-top: 2%;
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+}
+.projet:hover {
+    filter: brightness(90%);
+    transform: scale(1.06);
+}
+.projet {
+    background: #A57D5B;
+    border: 1px solid #000000;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    width: 20%;
+    height: 15em;
+    border-radius: 90px;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.projet img {
+    border-radius: 90px;
+    object-fit:cover;
+    position: relative;
+    width: 95%;
+    left: 2.5%;
+    top: 2%;
+    height: 70%;
+}
+
+.projet a {
+    font-size: 1.5rem !important;
+    color: #FFFFFF;
+    margin: 0;
+    left : 15%;
+    position: relative;
+    top: 5%;
+}
+.projet a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.projet button {
+    position: absolute;
+    right: 2%;
+    top: 55%;
+    background: #40271C;
+    border: 5px solid black !important;
+    border-radius: 50px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 2%;
+    cursor: pointer;
+}
+
+
+/* ========== MEDIA QUERIES RESPONSIVE - PAGE PROJETS ========== */
+
+/* Tablettes et petits écrans (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    /* Navigation */
+    nav {
+        width: 40%;
+        left: 30%;
+    }
+
+    /* Titre */
+    h2 {
+        font-size: 3.5rem !important;
+    }
+
+    /* Projets */
+    .projets {
+        flex-wrap: wrap;
+        gap: 3%;
+        padding: 0 5%;
+    }
+
+    .projet {
+        width: 30%;
+        height: 18em;
+    }
+
+    .projet a {
+        font-size: 1.3rem !important;
+        left: 10%;
+    }
+
+    .projet button {
+        font-size: 1rem !important;
+        padding: 3%;
+    }
+
+    /* Footer */
+    .bordure3 h5 {
+        font-size: 3em !important;
+    }
+
+    .rs {
+        margin-left: 35% !important;
+    }
+}
+
+/* Mobiles (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    /* Logo */
+    .logo .image {
+        width: 64px !important;
+        height: 64px !important;
+    }
+
+    /* Navigation */
+    nav {
+        width: 60%;
+        left: 20%;
+        height: 8%;
+    }
+
+    ul {
+        padding: 0.5%;
+    }
+
+    li a p {
+        font-size: 0.9rem !important;
+    }
+
+    /* Titre */
+    .titre {
+        margin-top: 15%;
+    }
+
+    h2 {
+        font-size: 3rem !important;
+    }
+
+    /* Main */
+    main {
+        padding-top: 5%;
+    }
+
+    /* Projets */
+    .projets {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        padding: 0 5%;
+        margin-top: 3%;
+    }
+
+    .projet {
+        width: 80%;
+        height: 20em;
+        border-radius: 60px;
+    }
+
+    .projet img {
+        border-radius: 60px;
+        height: 65%;
+    }
+
+    .projet a {
+        font-size: 1.5rem !important;
+        left: 20%;
+        top: 8%;
+    }
+
+    .projet button {
+        font-size: 1.1rem !important;
+        right: 5%;
+        top: 60%;
+        padding: 3%;
+    }
+
+    /* Footer */
+    .fin {
+        height: auto;
+        min-height: 20em;
+        padding-bottom: 2em;
+    }
+
+    .bordure3 {
+        flex-direction: column;
+        column-count: 1;
+        text-align: center;
+    }
+
+    .bordure3 h5 {
+        font-size: 2.5em !important;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .bordure3 p {
+        margin-left: 0 !important;
+        justify-content: center;
+        margin-top: 5%;
+        font-size: 1.2rem !important;
+    }
+
+    .rs {
+        margin-left: 0 !important;
+        margin-top: 8%;
+        justify-content: center;
+    }
+}
+
+

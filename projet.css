@@ -1,0 +1,579 @@
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    height: 0.75em;
+    width: 0.75em;
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #A57D5B;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(250, 250, 250, 0.75);
+}
+
+body {
+    background-color: rgb(237, 231, 231);
+    margin: 0;
+    padding: 0;
+    color: black !important;
+}
+
+h2 {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+    font-size: 4rem !important;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.bordure p {
+    font-size: 1.25rem;
+}
+
+a,
+button {
+    font-size: 1.3rem !important;
+    font-family: "EB Garamond", serif !important;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p {
+    font-size: 1.7rem;
+}
+
+.logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 5;
+}
+
+.button:hover {
+    background-color: #A57D5B;
+    border: solid white 1px;
+}
+
+/*Accueil
+Navigation*/
+nav {
+    top: 2%;
+    z-index: 3;
+    width: 25%;
+    height: 6%;
+    background-color: #40271C;
+    border-radius: 25px;
+    position: fixed;
+    left: 37.95%;
+}
+
+nav .bordure {
+    border: solid white 1px;
+    width: 98%;
+    height: 85%;
+    margin: 1%;
+    padding: 1%;
+    top: 0%;
+    LEFT: 0%;
+    position: absolute;
+    border-radius: 21px;
+    z-index: 3;
+}
+
+ul {
+    list-style-type: none ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1%;
+    position: relative;
+    margin: 0;
+}
+
+li a {
+    text-decoration: none;
+    color: white !important;
+}
+
+li a:hover {
+    color: #A57D5B !important;
+    text-decoration: solid underline;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+li a span {
+    color: #765232 !important;
+    font-weight: bold;
+}
+
+/*footer*/
+.fin {
+    background-color: #5b311f;
+    color: white;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 20em;
+    margin-top: 4em;
+}
+
+.bordure3 {
+    border: solid white 1px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    column-count: 2;
+}
+
+.bordure3 h5 {
+    position: relative;
+    display: flex;
+    font-size: 3.4em !important;
+    margin-top: 1.5%;
+    margin-left: 7%;
+    color: white;
+}
+
+.bordure3 p {
+    align-items: center;
+    display: flex;
+    margin-left: 2%;
+    margin-top: 2.5%;
+    text-shadow: #000000 2px 2px;
+}
+
+.rs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+    margin-left: 45% !important;
+    margin-top: 5%;
+}
+
+main {
+    padding-top: 1%;
+}
+
+
+/* projet */
+
+.titreprojet {
+    position: relative;
+    display: flex;
+    margin-top: 5%;
+}
+
+.titreprojet h1 {
+    font-size: 5rem !important;
+    color: #000000;
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    z-index: 3;
+    position: absolute;
+}
+
+.titreprojet img {
+    width: 100%;
+    height: 24em;
+    opacity: 0.5;
+    z-index: 1;
+    object-fit: cover;
+}
+
+
+/* Group 13 */
+.titre_text {
+    position: absolute;
+    width: 40em;
+    height: 11em;
+    left: 5em;
+    top: 11em;
+}
+
+.titre_text button {
+    position: relative;
+    top: 5em;
+    opacity: 1;
+    z-index: 3;
+    padding: 1.5% !important;
+}
+
+button, .etapes, .compétences, .outils {
+    background-color: #40271C !important;
+    border: 5px solid black !important;
+    border-radius: 50px;
+    text-align: center;
+    color: #FFFFFF !important;
+    cursor: pointer;
+}
+
+.outils {
+    width: 10%;
+    margin-top: 1.5%;
+    padding: 0.1%;
+    height: 2.5em;
+    margin-right: 20%;
+}
+.etapes, .compétences{
+    width: 30%;
+    margin-bottom: 5%;
+}
+
+.description {
+    position: relative;
+    padding: 4% !important;
+}
+
+.etapesetcompé {
+    columns: 2;
+    padding: 3% 10%;
+    gap: 30%;
+}
+
+.etapesetcompé ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 1%;
+    position: relative;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.etapesetcompé .chiffres {
+    list-style-type:decimal !important;
+}
+
+.etapesetcompé .points {
+    list-style-type:circle !important;
+}
+
+.outils_card {
+    padding: 3% 10%;
+    display: flex;
+}
+
+.images_outils {
+    display: flex;
+    gap: 20%;
+}
+
+.outils_card img {
+    width: 5em;
+    height: 5em;
+}
+
+.prototypes {
+    padding: 3% 5%;
+}
+
+.prototypes img {
+    width: 20em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ========== MEDIA QUERIES RESPONSIVE - PAGE DÉTAIL PROJET ========== */
+
+/* Tablettes et petits écrans (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    /* Navigation */
+    nav {
+        width: 40%;
+        left: 30%;
+    }
+
+    /* Titre du projet */
+    .titreprojet h1 {
+        font-size: 4rem !important;
+    }
+
+    .titre_text {
+        width: 35em;
+        height: 10em;
+        left: 3em;
+        top: 9em;
+    }
+
+    .titre_text button {
+        top: 4em;
+        padding: 2% !important;
+    }
+
+    /* Description */
+    .description {
+        padding: 5% !important;
+    }
+
+    .description p {
+        font-size: 1.5rem;
+    }
+
+    /* Etapes et compétences */
+    .etapesetcompé {
+        gap: 15%;
+        padding: 3% 5%;
+    }
+
+    .etapes, .compétences {
+        width: 40%;
+    }
+
+    .etapesetcompé ul {
+        font-size: 1.1rem;
+    }
+
+    /* Outils */
+    .outils {
+        width: 15%;
+        margin-right: 15%;
+    }
+
+    .outils_card {
+        padding: 3% 5%;
+    }
+
+    /* Iframe */
+    center iframe {
+        width: 90%;
+        height: 700px;
+    }
+
+    /* Footer */
+    .bordure3 h5 {
+        font-size: 3em !important;
+    }
+
+    .rs {
+        margin-left: 35% !important;
+    }
+}
+
+/* Mobiles (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    /* Logo */
+    .logo .image {
+        width: 64px !important;
+        height: 64px !important;
+    }
+
+    /* Navigation */
+    nav {
+        width: 60%;
+        left: 20%;
+        height: 8%;
+    }
+
+    ul {
+        padding: 0.5%;
+    }
+
+    .bordure p {
+        font-size: 1rem;
+    }
+
+    /* Main */
+    main {
+        padding-top: 15%;
+    }
+
+    /* Titre du projet */
+    .titreprojet {
+        margin-top: 10%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .titreprojet img {
+        height: 15em;
+        opacity: 0.3;
+    }
+
+    .titreprojet h1 {
+        font-size: 3rem !important;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 2em;
+    }
+
+    .titre_text {
+        position: relative;
+        width: 100%;
+        height: auto;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -8em;
+        z-index: 3;
+    }
+
+    .titre_text button {
+        position: relative;
+        top: 0;
+        margin-top: 1em;
+        padding: 2% 4% !important;
+    }
+
+    /* Description */
+    .description {
+        padding: 5% 3% !important;
+        margin-top: 15%;
+    }
+
+    .description p {
+        font-size: 1.3rem;
+        text-align: justify;
+    }
+
+    /* Etapes et compétences */
+    .etapesetcompé {
+        columns: 1;
+        padding: 5% 5%;
+        gap: 0;
+    }
+
+    .etapes, .compétences {
+        width: 50%;
+        margin: 3% 0;
+        padding: 2% !important;
+    }
+
+    .etapesetcompé ul {
+        font-size: 1.1rem;
+        margin-bottom: 2em;
+        padding-left: 5%;
+    }
+
+    /* Outils */
+    .outils_card {
+        padding: 5% 5%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5em;
+    }
+
+    .outils {
+        width: 30%;
+        margin: 0;
+        padding: 2% !important;
+    }
+
+    .images_outils {
+        gap: 10%;
+        flex-wrap: wrap;
+    }
+
+    .outils_card img {
+        width: 4em;
+        height: 4em;
+    }
+
+    /* Prototypes */
+    .prototypes {
+        padding: 5% 3%;
+    }
+
+    .prototypes img {
+        width: 100%;
+        max-width: 20em;
+    }
+
+    /* Iframe */
+    center iframe {
+        width: 95%;
+        height: 600px;
+    }
+
+    /* Footer */
+    .fin {
+        height: auto;
+        min-height: 20em;
+        padding-bottom: 2em;
+    }
+
+    .bordure3 {
+        flex-direction: column;
+        column-count: 1;
+        text-align: center;
+    }
+
+    .bordure3 h5 {
+        font-size: 2.5em !important;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .bordure3 p {
+        margin-left: 0 !important;
+        justify-content: center;
+        margin-top: 5%;
+        font-size: 1.2rem;
+    }
+
+    .rs {
+        margin-left: 0 !important;
+        margin-top: 8%;
+        justify-content: center;
+    }
+}
+
