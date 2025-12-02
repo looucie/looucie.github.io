@@ -31,6 +31,12 @@ h2{
     padding: 20px 0;
 }
 
+h5 {
+        font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
 p, a, button  {
     font-family: "EB Garamond", serif;
     font-weight: 400;
@@ -100,7 +106,6 @@ li a:hover {
 }
 
 li a span {
-    color: #765232 !important;
     font-weight: bold;
 }
 
@@ -150,7 +155,7 @@ li a span {
     justify-content: center;
     gap: 5%;
     margin-left: 45% !important;
-    margin-top: 5%;
+    margin-top: 7.5%;
 }
 
 .titre {
@@ -221,9 +226,8 @@ main {
 }
 
 
-/* ========== MEDIA QUERIES RESPONSIVE - PAGE PROJETS ========== */
+/* ========== RESPONSIVE  ========== */
 
-/* Tablettes et petits écrans (max-width: 1024px) */
 @media screen and (max-width: 1024px) {
     /* Navigation */
     nav {

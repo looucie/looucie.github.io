@@ -32,6 +32,12 @@ h2 {
     padding: 20px 0;
 }
 
+h5 {
+        font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .bordure p {
     font-size: 1.25rem;
 }
@@ -109,10 +115,6 @@ li a:hover {
     transition: color 0.3s ease-in-out;
 }
 
-li a span {
-    color: #765232 !important;
-    font-weight: bold;
-}
 
 /*footer*/
 .fin {
@@ -159,8 +161,8 @@ li a span {
     flex-direction: row;
     justify-content: center;
     gap: 5%;
-    margin-left: 45% !important;
-    margin-top: 5%;
+    margin-left: 40% !important;
+    margin-top: 7.5%;
 }
 
 main {

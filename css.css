@@ -108,7 +108,6 @@ li a:hover {
 }
 
 li a span {
-    color: #765232 !important;
     font-weight: bold;
 }
 
@@ -585,11 +584,12 @@ h8:hover {
     justify-content: center;
     gap: 5%;
     margin-left: 45% !important;
-    margin-top: 5%;
+    margin-top: 7.5%;
 }
-/* ========== MEDIA QUERIES RESPONSIVE ========== */
 
-/* Tablettes et petits écrans (max-width: 1024px) */
+
+/* ========== RESPONSIVE ========== */
+
 @media screen and (max-width: 1024px) {
     /* Navigation */
     nav {
@@ -713,7 +713,6 @@ h8:hover {
     }
 }
 
-/* Mobiles (max-width: 768px) */
 @media screen and (max-width: 768px) {
     /* Logo */
     .logo .image {
