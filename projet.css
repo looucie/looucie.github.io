@@ -291,6 +291,15 @@ button, .etapes, .compétences, .outils {
   box-sizing: border-box;
 }
 
+video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: solid black 5px;
+}
+
 
 .row {
   display: -ms-flexbox; /* IE10 */
