@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/projet.css">
-    <link rel="icon" type="image/x-icon" href="logosite.ico">
+    <link rel="icon" type="image/x-icon" href="/logosite.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
     <script src="https://kit.fontawesome.com/08b10a2ab2.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +44,7 @@
             <img src="/photos/projets/laconfiserie.jpg" alt="projet la confiserie">
             <div class="titre_text">
                 <h1>La Confiserie</h1>
-                <button>Développement Web</button>
+                <div class="button">Développement Web</div>
             </div>
         </div>
         <div class="description">
@@ -109,23 +109,30 @@
         <div class="fin" id="Contact">
             <box class="bordure3">
                 <h5>Contacts</h5>
-                <p>E-mail : lucie.flohicc@gmail.com</p>
+                <p class="mail">lucie.flohicc@gmail.com</p>
                 <div class="rs">
+                    <a href="photos/CV.pdf" target="_blank">
+                        <button class="link">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-file"></i>
+                                    </span>
+                                </button>
+                            </a>
                     <a href="https://github.com/looucie" target="_blank" title="Ouvre le profil GitHub"
                         aria-label="Ouvre le profil GitHub de Lucie">
-                        <figure class="button  is-rounded is-responsive is-large">
+                        <button class="link">
                             <span class="icon">
                                 <i class="fa-brands fa-github"></i>
                             </span>
-                        </figure>
+                        </button>
                     </a>
                     <a href="https://www.linkedin.com/in/lucieflohic/" target="_blank" title="Ouvre le profil Linkedin"
                         aria-label="Ouvre le profil Linkedin de Lucie">
-                        <figure class="button  is-rounded is-responsive is-large">
+                        <button class="link">
                             <span class="icon">
                                 <i class="fa-brands fa-linkedin"></i>
                             </span>
-                        </figure>
+                        </button>
                     </a>
                 </div>
             </box>

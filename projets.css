@@ -110,6 +110,17 @@ li a span {
 }
 
 /*footer*/
+
+.mail {
+    background-color: #A57D5B;
+    border-radius: 60PX;
+    height: 25%;
+    margin-top: 7.5%;
+    padding: 2%;
+    margin-left: 15%;
+        border: 1px solid #000000;
+}
+
 .fin {
     background-color: #5b311f;
     color: white;
@@ -144,9 +155,6 @@ li a span {
 .bordure3 p {
     align-items: center;
     display: flex;
-    margin-left: 2%;
-    margin-top: 2.5%;
-    text-shadow: #000000 2px 2px;
 }
 
 .rs {
@@ -154,8 +162,22 @@ li a span {
     flex-direction: row;
     justify-content: center;
     gap: 5%;
-    margin-left: 45% !important;
+    margin-left: 2%;
     margin-top: 7.5%;
+}
+
+.link {
+    background-color: #A57D5B;
+    border: none;
+    border-radius: 50%;
+    padding: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+        border: 1px solid #000000;
+}
+.link:hover {
+    background-color: #000000;
 }
 
 .titre {

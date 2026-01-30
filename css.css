@@ -2,6 +2,7 @@ html {
     scroll-behavior: smooth;
 }
 
+
 ::-webkit-scrollbar {
     height: 0.75em;
     width: 0.75em;
@@ -225,6 +226,7 @@ h3 {
     justify-content: center;
     gap: 6.25em;
     margin-bottom: 10%;
+    cursor: none;
 }
 
 .passion {
@@ -238,12 +240,14 @@ h3 {
     border: 1px solid #000000;
     border-radius: 125px 125px 0px 0px;
     transition: all 0.3s ease;
+    cursor: none;
 }
 
 .passion:hover {
     filter: brightness(90%);
     background-color: #765232;
     transform: scale(1.06);
+    cursor: none;
 }
 
 .passion img {
@@ -254,6 +258,7 @@ h3 {
     border-radius: 125px 125px 0px 0px;
     top: 1em;
     left: 5%;
+    cursor: none;
 }
 
 
@@ -540,6 +545,17 @@ h8:hover {
 
 
 /*footer*/
+
+.mail {
+    background-color: #A57D5B;
+    border-radius: 60PX;
+    height: 25%;
+    margin-top: 7.5%;
+    padding: 2%;
+    margin-left: 15%;
+        border: 1px solid #000000;
+}
+
 .fin {
     background-color: #5b311f;
     color: white;
@@ -574,9 +590,6 @@ h8:hover {
 .bordure3 p {
     align-items: center;
     display: flex;
-    margin-left: 2%;
-    margin-top: 2.5%;
-    text-shadow: #000000 2px 2px;
 }
 
 .rs {
@@ -584,10 +597,23 @@ h8:hover {
     flex-direction: row;
     justify-content: center;
     gap: 5%;
-    margin-left: 45% !important;
+    margin-left: 2%;
     margin-top: 7.5%;
 }
 
+.link {
+    background-color: #A57D5B;
+    border: none;
+    border-radius: 50%;
+    padding: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+        border: 1px solid #000000;
+}
+.link:hover {
+    background-color: #000000;
+}
 
 /* ========== RESPONSIVE ========== */
 
@@ -598,7 +624,7 @@ h8:hover {
         left: 30%;
     }
 
-    /* Titres principaux */
+    /* Titres */
     h1 {
         font-size: 5rem !important;
         left: 25%;
@@ -715,17 +741,17 @@ h8:hover {
 }
 
 @media screen and (max-width: 768px) {
-    /* Logo */
     .logo .image {
         width: 64px !important;
         height: 64px !important;
     }
 
-    /* Navigation */
     nav {
         width: 60%;
         left: 20%;
-        height: 8%;
+        height: 5%;
+        top: 90%;
+        box-shadow: #000000 0px 2px 2px;
     }
 
     ul {
@@ -734,38 +760,30 @@ h8:hover {
     }
 
     li a p {
-        font-size: 0.9rem !important;
+        font-size: 1rem !important;
     }
 
-    /* Titres principaux */
     .mainpage {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2em;
-        padding: 0 5%;
         margin-top: 10%;
     }
 
     .horloge {
-        width: 0%;
+        width: 50%;
         margin-top: 0;
     }
 
     h1 {
-        position: relative;
-        left: 0;
-        top: 0;
-        font-size: 4rem !important;
+        top: 15%;
+        left: 40%;
+        font-size: 3.25rem !important;
         text-align: left;
         margin-top: 0;
     }
 
     h2 {
-        position: absolute;
-        left: 45%;
-        top: 65%;
-        font-size: 1.8rem !important;
+        margin-top: 28% !important;
+        font-size: 1.2rem !important;
         text-align: left;
     }
 
