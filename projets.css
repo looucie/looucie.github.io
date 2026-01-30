@@ -306,15 +306,18 @@ main {
     nav {
         width: 60%;
         left: 20%;
-        height: 8%;
+        height: 5%;
+        top: 90%;
+        box-shadow: #000000 0px 2px 2px;
     }
 
     ul {
+        flex-direction: row;
         padding: 0.5%;
     }
 
     li a p {
-        font-size: 0.9rem !important;
+        font-size: 1rem !important;
     }
 
     /* Titre */

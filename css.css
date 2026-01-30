@@ -739,7 +739,7 @@ h8:hover {
         margin: 1em auto;
     }
 }
-
+/*mobile*/
 @media screen and (max-width: 768px) {
     .logo .image {
         width: 64px !important;

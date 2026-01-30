@@ -447,28 +447,25 @@ video {
     }
 
     /* Navigation */
-    nav {
+        nav {
         width: 60%;
         left: 20%;
-        height: 8%;
+        height: 5%;
+        top: 90%;
+        box-shadow: #000000 0px 2px 2px;
     }
 
     ul {
+        flex-direction: row;
         padding: 0.5%;
     }
 
-    .bordure p {
-        font-size: 1rem;
-    }
-
-    /* Main */
-    main {
-        padding-top: 15%;
+    li a p {
+        font-size: 1rem !important;
     }
 
     /* Titre du projet */
     .titreprojet {
-        margin-top: 10%;
         flex-direction: column;
         align-items: center;
     }
@@ -483,7 +480,7 @@ video {
         text-align: center;
         left: 50%;
         transform: translateX(-50%);
-        top: 2em;
+        width: 100%;
     }
 
     .titre_text {
@@ -499,10 +496,9 @@ video {
         z-index: 3;
     }
 
-    .titre_text button {
+    .titre_text .button {
         position: relative;
-        top: 0;
-        margin-top: 1em;
+        top: 4em;
         padding: 2% 4% !important;
     }
 
