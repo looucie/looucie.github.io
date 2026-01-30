@@ -59,6 +59,7 @@ p {
     top: 10px;
     left: 10px;
     z-index: 5;
+    width: 6%;
 }
 
 .button:hover {
@@ -229,7 +230,7 @@ main {
 
 .titre_text .button {
     position: relative;
-    top: 5.5em;
+    top: 6.5em;
     opacity: 1;
     z-index: 3;
     padding: 1.5% !important;

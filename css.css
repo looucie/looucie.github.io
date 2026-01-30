@@ -45,6 +45,7 @@ p {
 .logo {
     position: fixed;
     z-index: 5;
+    width: 6%;
 }
 
 h4 {
@@ -799,13 +800,13 @@ h8:hover {
     }
 
     .moi {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .grandep {
-        width: 80%;
+        width: 30%;
         height: auto;
-        transform: rotate(0deg);
+        transform: rotate(-10deg);
     }
 
     .petitp {
