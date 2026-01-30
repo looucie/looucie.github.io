@@ -18,7 +18,7 @@
     <header id="accueil">
         <div class="logo">
             <a href="#accueil" class="logo" title="Revenir à l'accueil" aria-label="Revenir à l'accueil">
-                    <img src="photos/logo.png" alt="logo d'un cigne avec une couronne">
+                <img src="photos/logo.png" alt="logo d'un cigne avec une couronne">
             </a>
         </div>
         <nav>
@@ -41,53 +41,60 @@
         <div class="titre">
             <h2>Mes Projets</h2>
         </div>
+        <div class="choisir" id="choix">
+            <button id="UDesign">UX/UI Design</button>
+            <button id="dev">Développement Web</button>
+            <button id="integration">Intégration</button>
+            <button id="graphisme">Graphisme</button>
+            <button id="3D">3D</button>
+        </div>
         <div class="projets">
-                        <div class="projet">
+            <a href="projets/projet8.html" class="projet">
                 <img src="photos/projets/SugarRush.png" alt="projet Diorama">
-                <button>3D</button>
-                <a href="projets/projet8.html">Diorama</a>
-            </div>
-            <div class="projet">
+                <button id="3D">3D</button>
+                <p>Diorama</p>
+            </a>
+            <a href="projets/projet7.html" class="projet">
                 <img src="photos/projets/spectacles.png" alt="projet spectacles du trégor">
-                <button>UX/UI Design</button>
-                <a href="projets/projet7.html">Spectacles du Trégor</a>
-            </div>
-            <div class="projet">
+                <button id="UDesign">UX/UI Design</button>
+                <p>Spectacles du Trégor</p>
+            </a>
+            <a href="projets/projet2.html" class="projet">
                 <img src="photos/projets/mb.png" alt="projet média bloom">
-                <button>Graphisme</button>
-                <a href="projets/projet2.html">Média Bloom</a>
-            </div>
+                <button id="graphisme">Graphisme</button>
+                <p>Média Bloom</p>
+            </a>
         </div>
         <div class="projets">
-                        <div class="projet">
+            <a href="projets/projet1.html" class="projet">
                 <img src="photos/projets/locfit.png" alt="projet la locfit">
-                <button>UX/UI Design</button>
-                <a href="projets/projet1.html">Locfit</a>
-            </div>
-            <div class="projet">
+                <button id="UDesign">UX/UI Design</button>
+                <p>Locfit</p>
+            </a>
+            <a href="projets/projet3.html" class="projet">
                 <img src="photos/projets/infographie.png" alt="projet infographie">
-                <button>Graphisme</button>
-                <a href="projets/projet3.html">Réseaux de neurones</a>
-            </div>
-            <div class="projet">
+                <button id="graphisme">Graphisme</button>
+                <p>Réseaux de neurones</p>
+            </a>
+            <a href="projets/projet4.html" class="projet">
                 <img src="photos/projets/laconfiserie.jpg" alt="projet la confiserie">
-                <button>Développement Web</button>
-                <a href="projets/projet4.html">La Confiserie</a>
-            </div>
+                <button id="dev">Développement Web</button>
+                <p>La Confiserie</p>
+            </a>
 
         </div>
         <div class="projets">
 
-            <div class="projet">
+            <a href="projets/projet6.html" class="projet">
                 <img src="photos/projets/autoportrait.png" alt="projet autoportrait">
-                <button>Graphisme</button>
-                <a href="projets/projet6.html">Autoportrait</a>
-            </div>
-                        <div class="projet">
+                <button id="graphisme">Graphisme</button>
+                <p>Autoportrait</p>
+            </a>
+            <a href="projets/projet5.html" class="projet">
                 <img src="photos/projets/magicball.png" alt="projet magicball">
-                <button>Intégration</button>
-                <a href="projets/projet5.html">MagicBall</a>
-            </div>
+                <button id="integration">Intégration</button>
+                <p>MagicBall</p>
+            </a>
         </div>
 
     </main>
@@ -99,11 +106,11 @@
                 <div class="rs">
                     <a href="photos/CV.pdf" target="_blank">
                         <button class="link">
-                                    <span class="icon">
-                                        <i class="fa-solid fa-file"></i>
-                                    </span>
-                                </button>
-                            </a>
+                            <span class="icon">
+                                <i class="fa-solid fa-file"></i>
+                            </span>
+                        </button>
+                    </a>
                     <a href="https://github.com/looucie" target="_blank" title="Ouvre le profil GitHub"
                         aria-label="Ouvre le profil GitHub de Lucie">
                         <button class="link">
@@ -126,5 +133,30 @@
     </footer>
 
 </body>
+
+<script>
+    var projet = document.getElementsByClassName("projet");
+    var boutons = document.getElementById("choix").getElementsByTagName("button");
+
+    for (let i = 0; i < boutons.length; i++) {
+        boutons[i].addEventListener("click", function () {
+            var category = this.id;
+            boutons[i].classList.add("choisi");
+
+            for (let j = 0; j < projet.length; j++) {
+                var projetButton = projet[j].getElementsByTagName("button")[0];
+                if (projetButton.id === category || category === "all") {
+                    projet[j].classList.remove("hidden");
+                } else {
+                    projet[j].classList.add("hidden");
+                }
+            }
+        });
+    }
+
+
+
+</script>
+
 
 </html>

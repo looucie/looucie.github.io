@@ -387,6 +387,13 @@ h3 {
     font-size: 2rem;
     cursor: pointer;
     color: black;
+    transition: color 0.3s ease;
+}
+
+.fa-arrow-up:hover,
+.fa-arrow-down:hover {
+    font-size : 2.1rem;
+    text-shadow: 2PX 2PX 2PX #353535;
 }
 
 /*Parcours*/
