@@ -41,6 +41,10 @@ p {
     font-size: 1.3rem !important;
 }
 
+.mobilenav {
+    display: none;
+}
+
 
 .logo {
     position: fixed;
@@ -622,6 +626,9 @@ h8:hover {
 .link:hover {
     background-color: #000000;
 }
+.mobilemenu {
+    display: none;
+}
 
 /* ========== RESPONSIVE ========== */
 
@@ -749,27 +756,54 @@ h8:hover {
 }
 /*mobile*/
 @media screen and (max-width: 768px) {
-    .logo .image {
-        width: 64px !important;
-        height: 64px !important;
+    .logo {
+        width: 15% !important;
+        height: 15% !important;
+        z-index: 5;
+        top: 2%;
+        left: 7%;
     }
 
     nav {
-        width: 60%;
-        left: 20%;
-        height: 5%;
-        top: 90%;
+        width: 90%;
+        left: 5%;
+        height: 8%;
+        top: 1%;
         box-shadow: #000000 0px 2px 2px;
+        z-index: 4;
     }
 
-    ul {
-        flex-direction: row;
-        padding: 0.5%;
+    nav ul {
+        display: none;
     }
 
-    li a p {
-        font-size: 1rem !important;
+    .hidden ul li {
+        display: none;
     }
+
+    .mobilenav {
+        position: fixed;
+        display: block;
+        position: absolute;
+        top: 2.75%;
+        right: 18%;
+        z-index: 5;
+
+    }
+    .hamburger {
+        cursor: pointer;
+        position: fixed;
+    }
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+        transition: 0.4s;
+        border-radius: 25px;
+    }
+
 
     .mainpage {
         display: flex;
@@ -777,47 +811,63 @@ h8:hover {
     }
 
     .horloge {
-        width: 50%;
-        margin-top: 0;
+        width: 0%;
     }
 
     h1 {
-        top: 15%;
-        left: 40%;
-        font-size: 3.25rem !important;
-        text-align: left;
-        margin-top: 0;
+        position: fixed;
+        top: 3%;
+        font-size: 20px !important;
+        COLOR: white;
+        z-index: 5;
+        left: 35%
     }
 
     h2 {
-        margin-top: 28% !important;
-        font-size: 1.2rem !important;
-        text-align: left;
+        display: none;
     }
 
-    h4 {
-        font-size: 3rem !important;
-        margin-top: 15em;
-    }
+.mobilemenu{
+    background-color: #40271C;
+    position: fixed;
+    top: 7.5%;
+    right: 5%;
+    width: 35%;
+    height: 30%;
+    border-radius: 25px;
+    display: flex;
+    z-index: 4;
+    color: white;
+    border: 1px solid #ffffff;
+}
+.mobilemenu ul {
+    position: relative;
+    margin-left: 15%;
+    list-style-type:circle !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em;
+}
 
     /* Bio */
     .Bio {
+        margin-top: 5%;
         height: auto;
         min-height: 90%;
     }
 
-    .moi {
-        flex-direction: row;
-    }
-
     .grandep {
-        width: 30%;
-        height: auto;
-        transform: rotate(-10deg);
+        width: 80%;
+        margin-left: -20%;
+
     }
 
     .petitp {
-        width: 0%;
+        width: 60%;
+        margin-top: -55%;
+        margin-left: 40%;
     }
 
     .h {
@@ -825,13 +875,22 @@ h8:hover {
     }
 
     h3 {
-        font-size: 3rem !important;
+        margin-top : -13% !important;
+        margin-bottom: 0.25em !important;
+        font-size: 40px !important;
     }
 
     .h p {
-        font-size: 1.2rem !important;
+        font-size: 15px !important;
     }
 
+    h6 {
+                MARGIN-top: 7% !important;
+    }
+
+    .titre3, h4 {
+        font-size: 3rem !important;
+    }
     .cv {
         flex-direction: column;
         align-items: center;
@@ -918,14 +977,18 @@ h8:hover {
     }
 
     .passions {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         gap: 2em;
     }
 
     .passion {
-        width: 14em;
-        height: 30em;
+        width: 7em;
+        height: 15em;
+    }
+    .passion img {
+        height: 13em;
+object-fit:fill;
     }
 
     /* Formation */
@@ -980,5 +1043,9 @@ h8:hover {
         margin-left: 0 !important;
         margin-top: 8%;
         justify-content: center;
+    }
+
+    .mail {
+        height: 20%;
     }
 }

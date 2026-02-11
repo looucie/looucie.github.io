@@ -376,12 +376,10 @@ main {
 
     .projet {
         width: 80%;
-        height: 20em;
-        border-radius: 60px;
+        height: 15em;
     }
 
     .projet img {
-        border-radius: 60px;
         height: 65%;
     }
 
