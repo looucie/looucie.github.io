@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -17,18 +17,38 @@
 <body>
     <header id="accueil">
         <div class="logo">
-            <a href="#accueil" class="logo" title="Revenir à l'accueil" aria-label="Revenir à l'accueil">
-                <img src="photos/logo.png" alt="logo d'un cigne avec une couronne">
+            <a href="index.html" class="logo" title="Revenir à l'accueil" aria-label="Revenir à l'accueil">
+                    <img src="photos/logo.png" alt="logo d'un cigne avec une couronne">
             </a>
+        </div>
+        <div class="mobilenav">
+                <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu de navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+        </div>
+        <div id="mobileMenu" class="hidden">
+            <ul>
+                <li><a href="index.html">
+                        <p>Accueil</p>
+                    </a></li>
+                <li><a href="projets.html">
+                        <p><span>Projets</span></p>
+                    </a></li>
+                <li><a href="#Contact">
+                        <p>Contact</p>
+                    </a></li>
+            </ul>
         </div>
         <nav>
             <box class="bordure">
                 <ul>
                     <li><a href="index.html">
-                            <p>Accueil</p>
+                            <p><span>Accueil</span></p>
                         </a></li>
                     <li><a href="projets.html">
-                            <p><span>Projets</span></p>
+                            <p>Projets</p>
                         </a></li>
                     <li><a href="#Contact">
                             <p>Contact</p>
@@ -36,7 +56,11 @@
                 </ul>
             </box>
         </nav>
+        <div class="mainpage">
+            <h1>Lucie Flohic</h1>
+        </div>
     </header>
+
     <main>
         <div class="titre">
             <h2>Mes Projets</h2>
@@ -154,7 +178,13 @@
         });
     }
 
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
 
+    hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('mobilemenu');
+        mobileMenu.classList.toggle('hidden');
+    });
 
 </script>
 

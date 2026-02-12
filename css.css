@@ -629,6 +629,9 @@ h8:hover {
 .mobilemenu {
     display: none;
 }
+.hidden li {
+    display: none;
+}
 
 /* ========== RESPONSIVE ========== */
 
