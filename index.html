@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css.css">
     <link rel="icon" type="image/x-icon" href="logosite.ico">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
     <script src="https://kit.fontawesome.com/08b10a2ab2.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,15 +17,15 @@
     <header id="accueil">
         <div class="logo">
             <a href="index.html" class="logo" title="Revenir à l'accueil" aria-label="Revenir à l'accueil">
-                    <img src="photos/logo.png" alt="logo d'un cigne avec une couronne">
+                <img src="photos/logo.png" alt="logo d'un cigne avec une couronne">
             </a>
         </div>
         <div class="mobilenav">
-                <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu de navigation">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
+            <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu de navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
         <div id="mobileMenu" class="hidden">
             <ul>
@@ -79,12 +78,9 @@
                         <div class="cv">
                             <h6>Retrouver mon CV juste ici →</h6>
                             <a href="photos/CV.pdf" target="_blank">
-                                <figure class="button is-medium is-rounded is-responsive" title="cv"
-                                    aria-label="Voir le CV">
-                                    <span class="icon">
-                                        <i class="fa-solid fa-file"></i>
-                                    </span>
-                                </figure>
+                                <span class="icon">
+                                    <i class="fa-solid fa-file"></i>
+                                </span>
                             </a>
                         </div>
                     </div>
@@ -133,19 +129,8 @@
 
         <div class="teddy">
             <h4 id="projets">Projets</h4>
-            <div class="projets">
-                <a href="projets/projet4.html" target="_blank" class="projet">
-                    <img src="photos/projets/laconfiserie.jpg" alt="projet création d'un site de confiserie" />
-                    <h8>La confiserie</h8>
-                </a>
-                <a href="projets/projet2.html" target="_blank" class="projet2">
-                    <img src="photos/projets/mb.png" alt="projet création d'un jeu de société" />
-                    <h8>Média Bloom</h8>
-                </a>
-                <a href="projets/projet3.html" target="_blank" class="projet3">
-                    <img src="photos/projets/infographie.png" alt="projet création d'une infographie sur l'IA" />
-                    <h8>Réseaux de neurones</h8>
-                </a>
+            <div class="projets" id="tout">
+                
             </div>
             <a href="projets.html" class="plus">Voir plus</a>
         </div>
@@ -166,20 +151,20 @@
             </box>
         </div>
 
-        <div class="back"> </div>
         <h4 id="Centres d'interets">Centres d’intérêts</h4>
+        <div class="back"> </div>
         <div class="passions">
             <div class="passion">
-                <img src="photos/musique.png" alt="projet création d'un site Pokemon" />
+                <img src="photos/musique.png" alt="musique" />
             </div>
             <div class="passion">
-                <img src="photos/jeux.png" alt="projet création d'un site Pokemon" />
+                <img src="photos/jeux.png" alt="Jeux vidéos" />
             </div>
             <div class="passion">
-                <img src="photos/mode.png" alt="projet création d'un site Pokemon" />
+                <img src="photos/mode.png" alt="Mode" />
             </div>
             <div class="passion">
-                <img src="photos/cinema.png" alt="projet création d'un site Pokemon" />
+                <img src="photos/cinema.png" alt="Cinéma" />
             </div>
 
         </div>
@@ -189,15 +174,17 @@
         <div class="fin" id="Contact">
             <box class="bordure3">
                 <h5>Contacts</h5>
-                <p class="mail">lucie.flohicc@gmail.com</p>
+                <div class="mail">
+                    <p>lucie.flohicc@gmail.com</p>
+                </div>
                 <div class="rs">
                     <a href="photos/CV.pdf" target="_blank">
                         <button class="link">
-                                    <span class="icon">
-                                        <i class="fa-solid fa-file"></i>
-                                    </span>
-                                </button>
-                            </a>
+                            <span class="icon">
+                                <i class="fa-solid fa-file"></i>
+                            </span>
+                        </button>
+                    </a>
                     <a href="https://github.com/looucie" target="_blank" title="Ouvre le profil GitHub"
                         aria-label="Ouvre le profil GitHub de Lucie">
                         <button class="link">
@@ -219,32 +206,33 @@
         </div>
     </footer>
 
-    <script>
 
-        var images = ["photos/outils/html.png", "photos/outils/css.png", "photos/outils/js.png", "photos/outils/sql.png", "photos/outils/php.png", "photos/outils/figma.png", "photos/outils/afdesign.png", "photos/outils/afphoto.png"];
-        var index = 0;
-
-        function showDivs() {
-            let total = images.length;
-            let topIndex = (index - 1 + total) % total;
-            let bottomIndex = (index + 1) % total;
-
-            document.getElementById("main").src = images[index];
-            document.getElementById("top").src = images[topIndex];
-            document.getElementById("bottom").src = images[bottomIndex];
-        }
-
-        function plusDivs(n) {
-            let total = images.length;
-            index = (index + n + total) % total;
-            showDivs();
-        }
-
-        showDivs();
-
-    </script>
 </body>
 <script>
+    //carrousel
+    var images = ["photos/outils/html.png", "photos/outils/css.png", "photos/outils/js.png", "photos/outils/sql.png", "photos/outils/php.png", "photos/outils/figma.png", "photos/outils/affinity.png"];
+    var index = 0;
+
+    function showDivs() {
+        let total = images.length;
+        let topIndex = (index - 1 + total) % total;
+        let bottomIndex = (index + 1) % total;
+
+        document.getElementById("main").src = images[index];
+        document.getElementById("top").src = images[topIndex];
+        document.getElementById("bottom").src = images[bottomIndex];
+    }
+
+    function plusDivs(n) {
+        let total = images.length;
+        index = (index + n + total) % total;
+        showDivs();
+    }
+
+    showDivs();
+
+    //menu mobile
+
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
 
@@ -252,6 +240,16 @@
         mobileMenu.classList.toggle('mobilemenu');
         mobileMenu.classList.toggle('hidden');
     });
-  
+
+ document.addEventListener('DOMContentLoaded', function() {
+        console.log("projetData:", projetData);
+        
+    getProjetIdByName("tout",projetData);
+    list3Projet("tout",projetData);
+
+ });
+
 </script>
+<script src="projets.bdd.js"></script>
+<script src="projet_api.js"></script>
 </html>

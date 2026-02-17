@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/projet.css">
+    <link rel="icon" type="image/x-icon" href="/logosite.ico">
+    <script src="https://kit.fontawesome.com/08b10a2ab2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <title>Projet</title>
+</head>
+
+<body>
+    <header id="accueil">
+        <div class="logo">
+            <a href="/index.html" class="logo" title="Revenir à l'accueil" aria-label="Revenir à l'accueil">
+                    <img src="/photos/logo.png" alt="logo d'un cigne avec une couronne">
+            </a>
+        </div>
+        <div class="mobilenav">
+                <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu de navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+        </div>
+        <div id="mobileMenu" class="hidden">
+            <ul>
+                <li><a href="/index.html">
+                        <p>Accueil</p>
+                    </a></li>
+                <li><a href="/projets.html">
+                        <p>Projets</p>
+                    </a></li>
+                <li><a href="#Contact">
+                        <p>Contact</p>
+                    </a></li>
+            </ul>
+        </div>
+        <nav>
+            <box class="bordure">
+                <ul>
+                    <li><a href="/index.html">
+                            <p>Accueil</p>
+                        </a></li>
+                    <li><a href="/projets.html">
+                            <p>Projets</p>
+                        </a></li>
+                    <li><a href="#Contact">
+                            <p>Contact</p>
+                        </a></li>
+                </ul>
+            </box>
+        </nav>
+        <div class="mainpage">
+            <h1>Lucie Flohic</h1>
+        </div>
+    </header>
+    <main id="tout">
+    </main>
+    <footer>
+        <div class="fin" id="Contact">
+            <box class="bordure3">
+                <h5>Contacts</h5>
+                <div class="mail"><p>lucie.flohicc@gmail.com</p></div>
+                <div class="rs">
+                    <a href="photos/CV.pdf" target="_blank">
+                        <button class="link">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-file"></i>
+                                    </span>
+                                </button>
+                            </a>
+                    <a href="https://github.com/looucie" target="_blank" title="Ouvre le profil GitHub"
+                        aria-label="Ouvre le profil GitHub de Lucie">
+                        <button class="link">
+                            <span class="icon">
+                                <i class="fa-brands fa-github"></i>
+                            </span>
+                        </button>
+                    </a>
+                    <a href="https://www.linkedin.com/in/lucieflohic/" target="_blank" title="Ouvre le profil Linkedin"
+                        aria-label="Ouvre le profil Linkedin de Lucie">
+                        <button class="link">
+                            <span class="icon">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </span>
+                        </button>
+                    </a>
+                </div>
+            </box>
+        </div>
+    </footer>
+
+</body>
+
+<script src="projets.bdd.js"></script>
+<script src="projet_api.js"></script>
+<script>
+
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('mobilemenu');
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("projetData:", projetData);
+        listProjetDetail("tout", projetData);
+    });
+
+
+</script>
+
+
+</html>

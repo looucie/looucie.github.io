@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="projets.css">
     <link rel="icon" type="image/x-icon" href="logosite.ico">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
     <script src="https://kit.fontawesome.com/08b10a2ab2.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,10 +44,10 @@
             <box class="bordure">
                 <ul>
                     <li><a href="index.html">
-                            <p><span>Accueil</span></p>
+                            <p>Accueil</p>
                         </a></li>
                     <li><a href="projets.html">
-                            <p>Projets</p>
+                            <p><span>Projets</span></p>
                         </a></li>
                     <li><a href="#Contact">
                             <p>Contact</p>
@@ -66,75 +65,28 @@
             <h2>Mes Projets</h2>
         </div>
         <div class="choisir" id="choix">
-            <button id="UDesign">UX/UI Design</button>
-            <button id="dev">Développement Web</button>
-            <button id="integration">Intégration</button>
-            <button id="graphisme">Graphisme</button>
+            <button id="UX/UI Design">UX/UI Design</button>
+            <button id="Développement Web">Développement Web</button>
+            <button id="Intégration">Intégration</button>
+            <button id="Graphisme">Graphisme</button>
             <button id="3D">3D</button>
         </div>
-        <div class="projets">
-            <a href="projets/projet8.html" class="projet">
-                <img src="photos/projets/SugarRush.png" alt="projet Diorama">
-                <button id="3D">3D</button>
-                <p>Diorama</p>
-            </a>
-            <a href="projets/projet7.html" class="projet">
-                <img src="photos/projets/spectacles.png" alt="projet spectacles du trégor">
-                <button id="UDesign">UX/UI Design</button>
-                <p>Spectacles du Trégor</p>
-            </a>
-            <a href="projets/projet2.html" class="projet">
-                <img src="photos/projets/mb.png" alt="projet média bloom">
-                <button id="graphisme">Graphisme</button>
-                <p>Média Bloom</p>
-            </a>
-        </div>
-        <div class="projets">
-            <a href="projets/projet1.html" class="projet">
-                <img src="photos/projets/locfit.png" alt="projet la locfit">
-                <button id="UDesign">UX/UI Design</button>
-                <p>Locfit</p>
-            </a>
-            <a href="projets/projet3.html" class="projet">
-                <img src="photos/projets/infographie.png" alt="projet infographie">
-                <button id="graphisme">Graphisme</button>
-                <p>Réseaux de neurones</p>
-            </a>
-            <a href="projets/projet4.html" class="projet">
-                <img src="photos/projets/laconfiserie.jpg" alt="projet la confiserie">
-                <button id="dev">Développement Web</button>
-                <p>La Confiserie</p>
-            </a>
-
-        </div>
-        <div class="projets">
-
-            <a href="projets/projet6.html" class="projet">
-                <img src="photos/projets/autoportrait.png" alt="projet autoportrait">
-                <button id="graphisme">Graphisme</button>
-                <p>Autoportrait</p>
-            </a>
-            <a href="projets/projet5.html" class="projet">
-                <img src="photos/projets/magicball.png" alt="projet magicball">
-                <button id="integration">Intégration</button>
-                <p>MagicBall</p>
-            </a>
-        </div>
+        <div id="tout" class="projets"></div>
 
     </main>
     <footer>
         <div class="fin" id="Contact">
             <box class="bordure3">
                 <h5>Contacts</h5>
-                <p class="mail">lucie.flohicc@gmail.com</p>
+                <div class="mail"><p>lucie.flohicc@gmail.com</p></div>
                 <div class="rs">
                     <a href="photos/CV.pdf" target="_blank">
                         <button class="link">
-                            <span class="icon">
-                                <i class="fa-solid fa-file"></i>
-                            </span>
-                        </button>
-                    </a>
+                                    <span class="icon">
+                                        <i class="fa-solid fa-file"></i>
+                                    </span>
+                                </button>
+                            </a>
                     <a href="https://github.com/looucie" target="_blank" title="Ouvre le profil GitHub"
                         aria-label="Ouvre le profil GitHub de Lucie">
                         <button class="link">
@@ -158,6 +110,8 @@
 
 </body>
 
+<script src="projets.bdd.js"></script>
+<script src="projet_api.js"></script>
 <script>
     var projet = document.getElementsByClassName("projet");
     var boutons = document.getElementById("choix").getElementsByTagName("button");
@@ -185,6 +139,14 @@
         mobileMenu.classList.toggle('mobilemenu');
         mobileMenu.classList.toggle('hidden');
     });
+
+ document.addEventListener('DOMContentLoaded', function() {
+        console.log("projetData:", projetData);
+        
+    getProjetIdByName("tout",projetData);
+    listAllProjet("tout",projetData);
+
+ });
 
 </script>
 
