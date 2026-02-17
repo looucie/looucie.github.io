@@ -101,7 +101,7 @@ const projetData = {
     "prototype": "projet/UI.pdf",
   },
   8: {
-      "cover": "diorama",
+      "cover": "Diorama",
     "name": "Sugar Rush",
     "categorie": "3D",
     "contexte": "Dans le cadre d’un projet universitaire en BUT MMI, j’ai conçu et modélisé un diorama 3D sous Blender. ",
