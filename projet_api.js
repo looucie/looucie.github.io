@@ -16,7 +16,7 @@ function listProjetDetail(domElementId, projetData) {
     
     domElement.innerHTML = `
         <div class="titreprojet">
-            <img src="/photos/${projet.cover}.png" alt="projet ${projet.name}">
+            <img src="photos/${projet.cover}.png" alt="projet ${projet.name}">
             <div class="titre_text">
                 <h1>${projet.name}</h1>
                 <div class="button">${projet.categorie}</div>
@@ -41,11 +41,11 @@ function listProjetDetail(domElementId, projetData) {
         <div class="outils_card">
             <div class="outils">Outils</div>
             <div class="images_outils">
-                ${projet.outils.map(outil => `<img src="/photos/outils/${outil}.png">`).join('')}
+                ${projet.outils.map(outil => `<img src="photos/outils/${outil}.png">`).join('')}
             </div>
         </div>
         <center>
-            <iframe src="/${projet.prototype}" width="1080" height="800"></iframe>
+            <iframe src="${projet.prototype}" width="1080" height="800"></iframe>
         </center>
     `;
 }
