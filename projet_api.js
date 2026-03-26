@@ -41,7 +41,7 @@ function listProjetDetail(domElementId, projetData) {
         <div class="outils_card">
             <div class="outils">Outils</div>
             <div class="images_outils">
-                ${projet.outils.map(outil => `<img src="photos/outils/${outil}.png">`).join('')}
+                ${projet.outils.map(outil => `<img src="photos/outils/${outil}.svg">`).join('')}
             </div>
         </div>
         <center>
