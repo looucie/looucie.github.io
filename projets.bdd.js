@@ -103,7 +103,7 @@ const projetData = {
   8: {
       "cover": "Diorama",
     "name": "Sugar Rush",
-    "categorie": "3D",
+    "categorie": "Animation",
     "contexte": "Dans le cadre d’un projet universitaire en BUT MMI, j’ai conçu et modélisé un diorama 3D sous Blender. ",
     "objectifs": "Partant juste d'un cube, j'ai pris en charge l'intégralité du processus créatif : de l'imagination de l'ambiance et de la scénographie jusqu’à la réalisation complète du décor, afin de créer un univers unique et cohérent.",
     "etapes": ["Recherche d'inspiration", 
@@ -115,7 +115,7 @@ const projetData = {
     "outils": ["pinterest", "blender"],
     "prototype": "projet/3D.mp4",
   },
-  8: {
+  9: {
       "cover": "timail",
     "name": "TiMail",
     "categorie": "UX/UI Design",
@@ -130,6 +130,23 @@ const projetData = {
     "hard_skills": ["UX/UI Design", "Recherches documentaires", "Maquette numérique"],
     "outils": ["figma"],
     "prototype": "projet/R403_TPA1_GRP_01.pdf",
+  },
+
+    10: {
+      "cover": "awf",
+    "name": "Catégorie AWF",
+    "categorie": "Animation",
+    "contexte": "À l'West Fest est un festival conçu par l'IUT de lannion afin de récompenser les meilleurs projets réalisés par les étudiants de BUT MMI. Pour la cérémonie j'ai réalisé une animation pour la catégorie UX/UI design.",
+    "objectifs": " L'objectif était de créer une animation conçue pour introduire les différentes catégories avant de dévoiler les récompenses avec des contraintes comme une durée de 10s, la DA de l'affiche à respecter ainsi qu'une vidéo ajouté en rotoscopie ou tracking.",
+    "etapes": ["Tirage au sort de la catégorie à réaliser", 
+      "Recherche d'inspiration", 
+      "Réalisation d'une première version", 
+      "Tournage d'une vidéo pour une rotoscopie",
+    "Finitions de l'animation" ],
+    "soft_skills": [ "Gestion du temps","Créativité"],
+    "hard_skills": ["Motion design", "Animation", "Rotoscopie"],
+    "outils": ["ae"],
+    "prototype": "projet/2A1_Flohic_UXUIDesign.mp4",
   },
 
 }
