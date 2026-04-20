@@ -115,5 +115,21 @@ const projetData = {
     "outils": ["pinterest", "blender"],
     "prototype": "projet/3D.mp4",
   },
+  8: {
+      "cover": "timail",
+    "name": "TiMail",
+    "categorie": "UX/UI Design",
+    "contexte": "Dans le cadre d’un projet universitaire en BUT MMI, en binôme nous avons conçu une maquette d’une application mobile reprenant le concept et/ou le design de GMail. ",
+    "objectifs": " L'objectif était de créer une application de messagerie électronique en ajoutant ou modifiant des fonctionnalités déjà présentes sur GMail, afin d'améliorer une expérience utilisateur.",
+    "etapes": ["Analyse de l'application GMail", 
+      "Recherche documentaire sur les applications de messagerie existantes", 
+      "Propositions de problèmatiques à résoudre", 
+      "Création du concept de l'application ainsi que ses fonctionnalités",
+    "Conception de la maquette de l'application" ],
+    "soft_skills": ["Travail d'équipe", "Créativité"],
+    "hard_skills": ["UX/UI Design", "Recherches documentaires", "Maquette numérique"],
+    "outils": ["figma"],
+    "prototype": "projet/R403_TPA1_GRP_01.pdf",
+  },
 
 }
