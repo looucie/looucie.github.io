@@ -132,21 +132,4 @@ const projetData = {
     "prototype": "projet/R403_TPA1_GRP_01.pdf",
   },
 
-    10: {
-      "cover": "awf",
-    "name": "Catégorie AWF",
-    "categorie": "Animation",
-    "contexte": "À l'West Fest est un festival conçu par l'IUT de lannion afin de récompenser les meilleurs projets réalisés par les étudiants de BUT MMI. Pour la cérémonie j'ai réalisé une animation pour la catégorie UX/UI design.",
-    "objectifs": " L'objectif était de créer une animation conçue pour introduire les différentes catégories avant de dévoiler les récompenses avec des contraintes comme une durée de 10s, la DA de l'affiche à respecter ainsi qu'une vidéo ajouté en rotoscopie ou tracking.",
-    "etapes": ["Tirage au sort de la catégorie à réaliser", 
-      "Recherche d'inspiration", 
-      "Réalisation d'une première version", 
-      "Tournage d'une vidéo pour une rotoscopie",
-    "Finitions de l'animation" ],
-    "soft_skills": [ "Gestion du temps","Créativité"],
-    "hard_skills": ["Motion design", "Animation", "Rotoscopie"],
-    "outils": ["ae"],
-    "prototype": "projet/2A1_Flohic_UXUIDesign.mp4",
-  },
-
 }
