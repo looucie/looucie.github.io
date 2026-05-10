@@ -27,21 +27,27 @@ function listProjetDetail(domElementId, projetData) {
             <p>${projet.objectifs}</p>
         </div>
         <div class="etapesetcompé">
-            <div class="etapes">Etapes clés</div>
+            <div class="etapes">
+            <h2>Etapes clés</h2>
             <ul class="chiffres">
                 ${projet.etapes.map(etape => `<li>${etape}</li>`).join('')}
             </ul>
-            <div class="compétences">Compétences</div>
+            </div>
+            <div class="compétences">
+            <h2>Compétences</h2>
             <ul class="points">
                 ${projet.soft_skills.map(soft => `<li>${soft}</li>`).join('')}
                 </br>
                 ${projet.hard_skills.map(hard => `<li>${hard}</li>`).join('')}
             </ul>
+            </div>
         </div>
         <div class="outils_card">
-            <div class="outils">Outils</div>
+            <div class="outils">
+            <h2>Outils</h2>
             <div class="images_outils">
                 ${projet.outils.map(outil => `<img src="photos/outils/${outil}.svg">`).join('')}
+            </div>
             </div>
         </div>
         <center>
@@ -76,7 +82,7 @@ function listAllProjet(domElementId, projetData) {
 }
 
 
-function list3Projet(domElementId, projetData, selectedIds = [7, 6, 4]) {
+function list3Projet(domElementId, projetData, selectedIds = [7, 6, 3]) {
     const domElement = document.getElementById(domElementId);
     const classes = ['projet', 'projet2', 'projet3'];
 
@@ -87,7 +93,7 @@ function list3Projet(domElementId, projetData, selectedIds = [7, 6, 4]) {
             return `
                 <a href="projet.html?projetName=${encodeURIComponent(projet.name)}" class="${classes[index]}">
                     <img src="photos/${projet.cover}.png" />
-                    <h8>${projet.name}</h8>
+                    <p>${projet.name}</p>
                 </a>
             `;
         }).join('');

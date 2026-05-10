@@ -1,0 +1,252 @@
+.color2 {
+    background-color: #AAC0D5;
+}
+
+
+
+#redim img {
+  width: 100%;
+  height: auto;        /* ← hauteur naturelle, pas de rognage */
+  object-fit: contain; /* ← conserve les proportions */
+  display: block;
+}
+
+/* ================ TIMELINE ================ */
+
+.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 2em auto;
+  padding: 1em 0;
+  list-style-type: none;
+}
+
+/* Ligne centrale */
+.timeline:before {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  content: '';
+  display: block;
+  width: 6px;
+  height: 100%;
+  margin-left: -1px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #000 8%, #000 92%, rgba(0,0,0,0) 100%);
+  z-index: 5;
+}
+
+.timeline li {
+  padding: 1.2em 0;
+  overflow: hidden;
+}
+
+/* ── Cartes ── */
+.direction-l,
+.direction-r {
+  position: relative;
+  width: 42%;
+}
+
+.direction-l { float: left; }
+.direction-r { float: right; }
+
+/* La carte elle-même */
+.flag-wrapper {
+  display: block;
+  background: #fff;
+  border-radius: 20px;
+  padding: 1em 1.2em;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  position: relative;
+}
+
+.flag {
+  display: block;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #000;
+}
+
+
+
+/* Date sous le titre */
+.time-wrapper {
+  display: block;
+  margin-top: 0.3em;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.time {
+  background: none;
+  padding: 0;
+}
+
+/* Description dans la carte */
+.desc {
+  margin: 0.4em 0 0 0;
+  font-style: normal;
+  color: #333;
+  line-height: 1.5;
+}
+
+.direction-r .desc { margin: 0.4em 0 0 0; }
+
+/* ── Point central ── */
+.flag-wrapper:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  background: #000000;
+  border: 3px solid #000;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.direction-l .flag-wrapper:before {
+  right: -22%;  /* pointe vers la ligne centrale */
+}
+
+.direction-r .flag-wrapper:before {
+  left: -21%;
+}
+
+/* ── Clearfix ── */
+.timeline li:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* ================ RESPONSIVE ================ */
+
+@media screen and (max-width: 660px) {
+  .timeline { padding: 2em 1em;   max-width: 275px; }
+
+  .timeline:before {
+    left: 16px;
+  }
+
+  .flag {
+    font-size: 1.25rem;
+  }
+
+  .direction-l,
+  .direction-r {
+    float: none;
+    width: 85%;
+    margin-left: 40px;
+    text-align: left;
+  }
+
+  .flag-wrapper:before {
+    left: -44px !important;
+    right: auto !important;
+  }
+}
+
+/* ================ PASSIONS ================ */
+
+.passions-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 2em auto 0;
+  flex-wrap: wrap;
+}
+
+.passion-tab {
+  display: flex;
+  flex-direction: row;  /* ← étoile + texte côte à côte */
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.passion-tab .star-icon {
+  width: 80%;
+  height: 70px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.passion-tab span {
+    width: 100%;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #000;
+  margin-top: 1em;
+  margin-left: -50px;
+}
+
+.passion-tab:hover .star-icon,
+.passion-tab.active .star-icon {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 6px #AAC0D5);
+}
+
+.passion-tab:hover .passion-tab span,
+.passion-tab.active .passion-tab span {
+    text-shadow: #AAC0D5 0px 0px 10px;
+}
+
+
+/* Panneau de contenu */
+.passions-panel {
+  display: none;
+  max-width: 800px;
+  margin: 2em auto;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 1.5em;
+}
+
+.passions-panel.active {
+  display: block;
+}
+
+.passion-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+.passion-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+@media screen and (max-width: 600px) {
+  .passions-tabs {
+    gap: 1.5rem;
+  }
+
+  .passion-tab .star-icon {
+    width: 60%;
+    height: 50px;
+  }
+
+  .passion-tab span {
+    font-size: 1rem;
+    margin-left: -30px;
+  }
+
+  .passion-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="CSS/css.css">
-    <link rel="stylesheet" href="CSS/projet.css ">
+    <link rel="stylesheet" href="CSS/css.css">
+        <link rel="stylesheet" href="CSS/contact.css">
     <link rel="icon" type="image/x-icon" href="logosite.ico">
     <script src="https://kit.fontawesome.com/08b10a2ab2.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <title>Projet</title>
+    <title>Portfolio de Luuwzz</title>
 </head>
 
 <body>
-  <div class="custom-cursor"></div>
+ <div class="custom-cursor"></div>
 <header id="accueil" class="color0">
 
   <!-- VERSION DESKTOP : ta nav existante -->
@@ -52,8 +52,13 @@
 </div>
 
 </header>
-    <main id="tout">
-    </main>
+    <main>
+        <div class="contact">
+            <h1>Me contacter</h1>
+            
+
+
+
     <footer>
         <div class="footer">
             <div CLASS="footer_left">
@@ -93,11 +98,7 @@
         </div>
     </footer>
 
-</body>
-
-<script src="projets.bdd.js"></script>
-<script src="projet_api.js"></script>
-<script>
+    <script>
 
 const cursor = document.querySelector('.custom-cursor');
 
@@ -129,26 +130,28 @@ overlay.querySelectorAll('.overlay-link').forEach(link => {
   link.addEventListener('click', () => toggleMenu(false));
 });
 
+        document.fonts.ready.then(function () {
+            const track = document.getElementById('marquee-track');
+            const original = document.getElementById('marquee-original');
 
-    document.addEventListener('DOMContentLoaded', function() {
-        console.log("projetData:", projetData);
-        listProjetDetail("tout", projetData);
-    });
+            const clone = original.cloneNode(true);
+            clone.setAttribute('aria-hidden', 'true');
+            track.appendChild(clone);
 
-     // ── Reveal au scroll ──
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target); // animate une seule fois
-    }
-  });
-}, { threshold: 0.15 }); // déclenche quand 15% visible
+            const contentWidth = original.offsetWidth;
+            let x = 0;
 
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+            function animate() {
+                x -= 0.25;
+                if (x <= -contentWidth) x = 0;
+                track.style.transform = `translateX(${x}px)`;
+                requestAnimationFrame(animate);
+            }
 
-
-</script>
+            animate();
+        });
+       </script>
+</body>
 
 
 </html>

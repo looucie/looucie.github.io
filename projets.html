@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="projets.css">
+    <link rel="stylesheet" href="CSS/css.css">
+        <link rel="stylesheet" href="CSS/projets.css">
     <link rel="icon" type="image/x-icon" href="logosite.ico">
     <script src="https://kit.fontawesome.com/08b10a2ab2.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,55 +15,46 @@
 </head>
 
 <body>
-    <header id="accueil">
-        <div class="logo">
-            <a href="index.html" class="logo" title="Revenir à l'accueil" aria-label="Revenir à l'accueil">
-                    <img src="photos/logo.png" alt="logo d'un cigne avec une couronne">
-            </a>
-        </div>
-        <div class="mobilenav">
-                <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu de navigation">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-        </div>
-        <div id="mobileMenu" class="hidden">
-            <ul>
-                <li><a href="index.html">
-                        <p>Accueil</p>
-                    </a></li>
-                <li><a href="projets.html">
-                        <p><span>Projets</span></p>
-                    </a></li>
-                <li><a href="#Contact">
-                        <p>Contact</p>
-                    </a></li>
-            </ul>
-        </div>
-        <nav>
-            <box class="bordure">
-                <ul>
-                    <li><a href="index.html">
-                            <p>Accueil</p>
-                        </a></li>
-                    <li><a href="projets.html">
-                            <p><span>Projets</span></p>
-                        </a></li>
-                    <li><a href="#Contact">
-                            <p>Contact</p>
-                        </a></li>
-                </ul>
-            </box>
-        </nav>
-        <div class="mainpage">
-            <h1>Lucie Flohic</h1>
-        </div>
-    </header>
+    <div class="custom-cursor"></div>
+<header id="accueil" class="color0">
 
+  <!-- VERSION DESKTOP : ta nav existante -->
+  <nav class="desktop-nav">
+    <a href="index.html" class="logo" aria-label="Accueil">
+      <img src="photos/logo.png" alt="logo cigne avec couronne">
+    </a>
+    <a href="propos.html">À propos</a>
+    <a href="projets.html">Projets</a>
+    <a class="button_contact" href="contact.html">Contact</a>
+  </nav>
+
+  <!-- VERSION MOBILE : logo + burger -->
+  <div class="mobile-header">
+    <a href="index.html" class="mobile-logo" aria-label="Accueil">
+      <img src="photos/logo.png" alt="logo cigne avec couronne">
+    </a>
+    <button class="hamburger-btn" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+
+  <!-- Overlay menu -->
+  <div class="nav-overlay" id="nav-overlay" role="dialog" aria-modal="true">
+  <button class="overlay-close" id="overlay-close" aria-label="Fermer le menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+  <a class="overlay-link" href="propos.html">À propos</a>
+  <a class="overlay-link" href="projets.html">Projets</a>
+  <a class="overlay-link" id="contactlink" href="contact.html">Contact</a>
+</div>
+
+</header>
     <main>
         <div class="titre">
-            <h2>Mes Projets</h2>
+            <h1>Mes Projets</h1>
         </div>
         <div class="choisir" id="choix">
             <button id="UX/UI Design">UX/UI Design</button>
@@ -75,36 +67,41 @@
 
     </main>
     <footer>
-        <div class="fin" id="Contact">
-            <box class="bordure3">
-                <h5>Contacts</h5>
-                <div class="mail"><p>lucie.flohicc@gmail.com</p></div>
-                <div class="rs">
-                    <a href="photos/CV.pdf" target="_blank">
-                        <button class="link">
-                                    <span class="icon">
-                                        <i class="fa-solid fa-file"></i>
-                                    </span>
-                                </button>
-                            </a>
-                    <a href="https://github.com/looucie" target="_blank" title="Ouvre le profil GitHub"
-                        aria-label="Ouvre le profil GitHub de Lucie">
-                        <button class="link">
-                            <span class="icon">
-                                <i class="fa-brands fa-github"></i>
-                            </span>
-                        </button>
+        <div class="footer">
+            <div CLASS="footer_left">
+                <img src="photos/logo.png" alt="logo d'un cigne avec une couronne">
+                <div class="reseaux">
+                    <h2>Lucie Flohic</h2>
+                    <a href="https://www.linkedin.com/in/lucie-flohic/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin" ></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/lucieflohic/" target="_blank" title="Ouvre le profil Linkedin"
-                        aria-label="Ouvre le profil Linkedin de Lucie">
-                        <button class="link">
-                            <span class="icon">
-                                <i class="fa-brands fa-linkedin"></i>
-                            </span>
-                        </button>
+                    <a href="https://github.com/looucie" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-github" ></i>
+                    </a>
+                    <a href="lucieflohicc@gmail.com" target="_blank" aria-label="LinkedIn">
+                        <i class="fa-solid fa-envelope"></i>
                     </a>
                 </div>
-            </box>
+            </div>
+            <div class="footer_right">
+                <H2>Navigation</H2>
+                <a href="index.html">
+                    <p>Accueil</p>
+                </a>
+                <a href="apropos.html">
+                    <p>À propos</p>
+                </a>
+                <a href="projets.html">
+                    <p>Projets</p>
+                </a>
+                <a href="contact.html">
+                    <p>Contact</p>
+                </a>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="cv_container">
+            <a href="photos/CV.pdf" class="cv">Télécharger mon CV <i class="fa-solid fa-circle-arrow-down"></i></a>
         </div>
     </footer>
 
@@ -113,41 +110,91 @@
 <script src="projets.bdd.js"></script>
 <script src="projet_api.js"></script>
 <script>
-    var projet = document.getElementsByClassName("projet");
-    var boutons = document.getElementById("choix").getElementsByTagName("button");
+
+const cursor = document.querySelector('.custom-cursor');
+
+document.addEventListener('mousemove', function (e) {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+});
+
+document.querySelectorAll('a, button').forEach(el => {
+  el.addEventListener('mouseenter', () => cursor.classList.add('is-pointer'));
+  el.addEventListener('mouseleave', () => cursor.classList.remove('is-pointer'));
+});
+
+
+     document.addEventListener('DOMContentLoaded', function () {
+    listAllProjet("tout", projetData);  // ← affiche tous les projets
+});
+document.addEventListener('DOMContentLoaded', function () {
+    // 1. Génère les projets
+    listAllProjet("tout", projetData);
+
+    // 2. MAINTENANT les .projet existent, on peut écouter
+    const projets = document.getElementsByClassName("projet");
+    const boutons = document.getElementById("choix").getElementsByTagName("button");
 
     for (let i = 0; i < boutons.length; i++) {
         boutons[i].addEventListener("click", function () {
-            var category = this.id;
-            boutons[i].classList.add("choisi");
+            // Réinitialise tous les boutons
+            for (let k = 0; k < boutons.length; k++) {
+                boutons[k].classList.remove("choisi");
+            }
+            this.classList.add("choisi");
 
-            for (let j = 0; j < projet.length; j++) {
-                var projetButton = projet[j].getElementsByTagName("button")[0];
+            const category = this.id;
+
+            for (let j = 0; j < projets.length; j++) {
+                const projetButton = projets[j].querySelector("button");
                 if (projetButton.id === category || category === "all") {
-                    projet[j].classList.remove("hidden");
+                    projets[j].classList.remove("hidden");
                 } else {
-                    projet[j].classList.add("hidden");
+                    projets[j].classList.add("hidden");
                 }
             }
         });
     }
+});
 
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
+const burger = document.getElementById('burger');
+const overlay = document.getElementById('nav-overlay');
 
-    hamburger.addEventListener('click', () => {
-        mobileMenu.classList.toggle('mobilemenu');
-        mobileMenu.classList.toggle('hidden');
-    });
+function toggleMenu(force) {
+  const isOpen = force !== undefined ? force : !burger.classList.contains('open');
+  burger.classList.toggle('open', isOpen);
+  overlay.classList.toggle('open', isOpen);
+  burger.setAttribute('aria-expanded', isOpen);
+}
 
- document.addEventListener('DOMContentLoaded', function() {
-        console.log("projetData:", projetData);
-        
-    getProjetIdByName("tout",projetData);
-    listAllProjet("tout",projetData);
+burger.addEventListener('click', () => toggleMenu());
+document.getElementById('overlay-close').addEventListener('click', () => toggleMenu(false));
 
- });
+overlay.querySelectorAll('.overlay-link').forEach(link => {
+  link.addEventListener('click', () => toggleMenu(false));
+});
 
+        document.fonts.ready.then(function () {
+            const track = document.getElementById('marquee-track');
+            const original = document.getElementById('marquee-original');
+
+            const clone = original.cloneNode(true);
+            clone.setAttribute('aria-hidden', 'true');
+            track.appendChild(clone);
+
+            const contentWidth = original.offsetWidth;
+            let x = 0;
+
+            function animate() {
+                x -= 0.25;
+                if (x <= -contentWidth) x = 0;
+                track.style.transform = `translateX(${x}px)`;
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+        });
+    
 </script>
 
 
