@@ -154,13 +154,16 @@ iframe {
     }
 
     /* Etapes et compétences */
-    .etapesetcompé {
-        gap: 15%;
-        padding: 3% 5%;
-    }
+.etapesetcompé {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; /* les deux cartes font la même hauteur */
+    padding: 1% 10%;
+    gap: 15%;
+}
 
     .etapes, .compétences {
-        width: 40%;
+        width: 100%;
     }
 
     .etapesetcompé ul {
@@ -169,7 +172,7 @@ iframe {
 
     /* Outils */
     .outils {
-        width: 15%;
+        width: 100%;
         margin-right: 15%;
     }
 

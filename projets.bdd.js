@@ -1,5 +1,6 @@
 const projetData = {
   1: {
+    "color" : "#ad658b79",
     "cover": "magicball",
     "name": "MagicBall",
     "categorie": "Intégration",
@@ -14,6 +15,7 @@ const projetData = {
     "prototype": "projet/magicball.pdf",
   },
   2: {
+    "color" : "#6599ad79",
     "cover": "autoportrait",
     "name": "Autoportrait",
     "categorie": "Graphisme",
@@ -27,6 +29,7 @@ const projetData = {
     "prototype": "projet/ap.pdf",
   },
   3: {
+    "color" : "#ad656579",
     "cover": "laconfiserie",
     "name": "La Confiserie",
     "categorie": "Développement Web",
@@ -40,6 +43,7 @@ const projetData = {
     "prototype": "projet/confiserie.pdf",
   },
   4: {
+    "color" : "#656bad79",
       "cover": "infographie",
     "name": "Réseaux de neurones",
     "categorie": "Graphisme",
@@ -52,6 +56,7 @@ const projetData = {
     "prototype": "projet/Infographie.pdf",
   },
   5: {
+    "color" : "#ad9b6579",
     "cover": "locfit",
     "name": "Locfit",
     "categorie": "UX/UI Design",
@@ -69,6 +74,7 @@ const projetData = {
     "prototype": "projet/SAE301.pdf",
   },
   6: {
+    "color" : "#a265ad79",
       "cover": "mb",
     "name": "Média Bloom",
     "categorie": "Graphisme",
@@ -85,6 +91,7 @@ const projetData = {
     "prototype": "projet/mb.pdf",
   },
   7: {
+    "color" : "#ad656579",
       "cover": "spectacle",
     "name": "Spectacles du Trégor",
     "categorie": "UX/UI Design",
@@ -101,6 +108,7 @@ const projetData = {
     "prototype": "projet/UI.pdf",
   },
   8: {
+    "color" : "#ad659379",
       "cover": "Diorama",
     "name": "Sugar Rush",
     "categorie": "Animation",

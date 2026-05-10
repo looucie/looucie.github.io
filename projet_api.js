@@ -26,14 +26,14 @@ function listProjetDetail(domElementId, projetData) {
             <p>${projet.contexte}</p>
             <p>${projet.objectifs}</p>
         </div>
-        <div class="etapesetcompé">
-            <div class="etapes">
+        <div class="etapesetcompé" style="display: flex; flex-direction: row; align-items: flex-start; gap: 5%;">
+            <div class="etapes" style="background-color: ${projet.color};">
             <h2>Etapes clés</h2>
             <ul class="chiffres">
                 ${projet.etapes.map(etape => `<li>${etape}</li>`).join('')}
             </ul>
             </div>
-            <div class="compétences">
+            <div class="compétences" style="background-color: ${projet.color};"> 
             <h2>Compétences</h2>
             <ul class="points">
                 ${projet.soft_skills.map(soft => `<li>${soft}</li>`).join('')}
@@ -43,7 +43,7 @@ function listProjetDetail(domElementId, projetData) {
             </div>
         </div>
         <div class="outils_card">
-            <div class="outils">
+            <div class="outils" style="background-color: ${projet.color};">
             <h2>Outils</h2>
             <div class="images_outils">
                 ${projet.outils.map(outil => `<img src="photos/outils/${outil}.svg">`).join('')}
