@@ -92,6 +92,14 @@ header {
   flex-grow: 0;
 }
 
+header nav a {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
 .desktop-nav {
   z-index: 500;
   position: fixed;
