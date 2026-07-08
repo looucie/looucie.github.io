@@ -82,7 +82,7 @@ function listAllProjet(domElementId, projetData) {
 }
 
 
-function list3Projet(domElementId, projetData, selectedIds = [7, 9, 3]) {
+function list3Projet(domElementId, projetData, selectedIds = [7, 10, 3]) {
     const domElement = document.getElementById(domElementId);
     const classes = ['projet', 'projet2', 'projet3'];
 
