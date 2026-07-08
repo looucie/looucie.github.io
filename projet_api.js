@@ -27,7 +27,7 @@ function listProjetDetail(domElementId, projetData) {
             <p>${projet.objectifs}</p>
         </div>
         <div class="etapesetcompé" style="display: flex; flex-direction: row; align-items: flex-start; gap: 5%;">
-            <div class="etapes" style="background-color: ${projet.color};">
+<div class="etapes" style="--carte-couleur: ${projet.color};">
             <h2>Etapes clés</h2>
             <ul class="chiffres">
                 ${projet.etapes.map(etape => `<li>${etape}</li>`).join('')}
@@ -82,7 +82,7 @@ function listAllProjet(domElementId, projetData) {
 }
 
 
-function list3Projet(domElementId, projetData, selectedIds = [7, 6, 3]) {
+function list3Projet(domElementId, projetData, selectedIds = [7, 9, 3]) {
     const domElement = document.getElementById(domElementId);
     const classes = ['projet', 'projet2', 'projet3'];
 

@@ -1,336 +1,496 @@
 
-
-/* projet */
-
-.titreprojet {
-    position: relative;
-    display: flex;
-    margin-top: -2%;
-    z-index: 1;
-}
-
-.titreprojet h1 {
-    font-size: 5rem;
-    color: #000000;
-    z-index: 3;
-}
-
-.titreprojet img {
-    width: 100%;
-    height: 24em;
-    opacity: 0.5;
-    z-index: 1;
-    object-fit: cover;
-}
-
-
-.titre_text {
-    position: absolute;
-    width: fit-content;
-    height: 14em;
-    left: 5em;
-    top: 8em;
-}
-
-.titre_text .button {
-position: relative;
-bottom : 25%;
-    opacity: 1;
-    z-index: 3;
-    padding: 5% !important;
-}
-
-.button{
-    background-color: #000000 !important;
-    padding: 20PX 15PX;
-    border-radius: 50px !important;
-    text-align: center;
-    color: #FFFFFF !important;
-    cursor: pointer;
-    width: fit-content;
-}
-
-
-.description {
-    position: relative;
-    padding: 4% 10% !important;
-    font-size: 26PX;
-}
-
-.etapesetcompé {
-    columns: 2;
-    padding: 1% 10%;
-    gap: 15%;
-}
-
-.etapes, .compétences, .outils {
-padding: 5% 15%;
-
-width: 100%;
-height: 100%;
-
-background: #FFFFFF;
-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
-border-radius: 50px;
-}
-.outils {
-    padding: 3% 15%;
-}
-
-.etapesetcompé ul {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    padding: 1%;
-    position: relative;
-    margin: 0;
-    font-size: 1.25rem;
-}
-
-.etapesetcompé .chiffres {
-    list-style-type:decimal !important;
-}
-
-.etapesetcompé .points {
-    list-style-type:circle !important;
-}
-
-.outils_card {
-    display: flex;
-    padding: 1% 10%;
-}
-
-.images_outils {
-    display: flex;
-    gap: 10%;
-}
-
-.outils_card img {
-    width: 4em;
-    height: 4em;
-}
-
-iframe {
-    border: none;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    border-radius: 20px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+:root {
+  --color-noir: #111111;
+  --color-blanc: #ffffff;
+  --color-fond: #faf8f4;
+  --carte-couleur-defaut: #AAC0D5;
+  --radius-carte: 32px;
 }
 
 * {
   box-sizing: border-box;
 }
 
+/* ---------- Bandeau titre ---------- */
 
-/* ========== MEDIA QUERIES RESPONSIVE - PAGE DÉTAIL PROJET ========== */
+.titreprojet {
+  position: relative;
+  display: flex;
+  margin-top: -2%;
+  z-index: 1;
+  overflow: hidden;
+}
 
-/* Tablettes et petits écrans (max-width: 1024px) */
+.titreprojet img {
+  width: 100%;
+  height: 24em;
+  opacity: 0.45;
+  object-fit: cover;
+  filter: saturate(1.3);
+  z-index: 1;
+}
+
+.titreprojet::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.15), transparent 60%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.titreprojet h1 {
+  font-size: 5rem;
+  color: var(--color-noir);
+  z-index: 3;
+}
+
+.titre_text {
+  position: absolute;
+  width: fit-content;
+  height: 14em;
+  left: 5em;
+  top: 8em;
+  z-index: 3;
+}
+
+.titre_text .button {
+  position: relative;
+  bottom: 25%;
+  padding: 5%;
+}
+
+.button {
+  width: fit-content;
+  padding: 12px 28px;
+  background-color: var(--carte-couleur, var(--color-noir));
+  color: var(--color-blanc);
+  font-weight: 700;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* ---------- Description ---------- */
+
+.description {
+  position: relative;
+  padding: 5% 12%;
+  font-size: 1.5rem;
+}
+
+.description p {
+  margin-bottom: 1em;
+}
+
+.description p:first-of-type::first-letter {
+  font-size: 3rem;
+  font-weight: 700;
+  float: left;
+  line-height: 0.8;
+  margin-right: 0.1em;
+  color: var(--carte-couleur-defaut);
+}
+
+/* ---------- Étapes / Compétences / Outils : cartes ---------- */
+
+.etapesetcompé {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 6%;
+  padding: 2% 10% 4%;
+}
+
+.etapesetcompé ul {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  position: relative;
+  margin: 0;
+  padding: 1%;
+  font-size: 1.15rem;
+  gap: 0.5em;
+}
+
+.etapesetcompé li {
+  padding-left: 0.3em;
+}
+
+.etapesetcompé .chiffres {
+  list-style-type: decimal;
+}
+
+.etapesetcompé .points {
+  list-style-type: "✦  ";
+}
+
+.etapes,
+.compétences,
+.outils {
+  width: 100%;
+  height: 100%;
+  padding: 6% 10%;
+  background: var(--color-blanc);
+  border: 2px solid var(--color-noir);
+  border-radius: var(--radius-carte);
+  box-shadow: 8px 8px 0px 0px var(--carte-couleur, var(--carte-couleur-defaut));
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.etapes:hover,
+.compétences:hover,
+.outils:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0px 0px var(--carte-couleur, var(--carte-couleur-defaut));
+}
+
+.etapes {
+  transform: rotate(-1deg);
+}
+
+.etapes:hover {
+  transform: rotate(-1deg) translate(-4px, -4px);
+}
+
+.compétences {
+  transform: rotate(1deg);
+}
+
+.compétences:hover {
+  transform: rotate(1deg) translate(-4px, -4px);
+}
+
+.etapes h2,
+.compétences h2,
+.outils h2 {
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 0.6em;
+}
+
+.outils_card {
+  display: flex;
+  padding: 1% 10% 5%;
+}
+
+.images_outils {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8%;
+}
+
+.outils_card img {
+  width: 4em;
+  height: 4em;
+  padding: 0.4em;
+  background: var(--color-fond);
+  border-radius: 16px;
+  border: 2px solid var(--color-noir);
+  transition: transform 0.2s ease;
+}
+
+.outils_card img:hover {
+  transform: scale(1.1) rotate(-4deg);
+}
+
+/* ---------- Iframe prototype ---------- */
+
+iframe {
+  border: 2px solid var(--color-noir);
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border-radius: 24px;
+  box-shadow: 10px 10px 0px 0px var(--carte-couleur-defaut);
+  max-width: 100%;
+}
+
+/* ===========================================================
+   RESPONSIVE
+   =========================================================== */
+
 @media screen and (max-width: 1024px) {
 
-    .titreprojet h1 {
-        font-size: 4rem !important;
-    }
+  .titreprojet h1 {
+    font-size: 4rem;
+  }
 
-    .titre_text {
-        width: 35em;
-        height: 10em;
-        left: 3em;
-        top: 9em;
-    }
+  .titre_text {
+    width: 35em;
+    height: 10em;
+    left: 3em;
+    top: 9em;
+  }
 
-    .titre_text button {
-        top: 4em;
-        padding: 2% !important;
-    }
+  .titre_text .button {
+    top: 4em;
+    padding: 2%;
+  }
 
-    /* Description */
-    .description {
-        padding: 5% !important;
-    }
+  .description {
+    padding: 5%;
+  }
 
-    .description p {
-        font-size: 1.5rem;
-    }
+  .description p {
+    font-size: 1.2rem;
+  }
 
-    /* Etapes et compétences */
-.etapesetcompé {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch; /* les deux cartes font la même hauteur */
+  .etapesetcompé {
+    align-items: stretch;
     padding: 1% 10%;
-    gap: 15%;
+    gap: 10%;
+  }
+
+  .etapes,
+  .compétences {
+    width: 100%;
+  }
+
+  .etapesetcompé ul {
+    font-size: 1.05rem;
+  }
+
+  .outils {
+    width: 100%;
+    margin-right: 15%;
+  }
+
+  .outils_card {
+    padding: 3% 5%;
+  }
+
+  center iframe {
+    width: 90%;
+    height: 700px;
+  }
+
+  .bordure3 h5 {
+    font-size: 3em;
+  }
+
+  .rs {
+    margin-left: 35%;
+  }
 }
 
-    .etapes, .compétences {
-        width: 100%;
-    }
-
-    .etapesetcompé ul {
-        font-size: 1.1rem;
-    }
-
-    /* Outils */
-    .outils {
-        width: 100%;
-        margin-right: 15%;
-    }
-
-    .outils_card {
-        padding: 3% 5%;
-    }
-
-    /* Iframe */
-    center iframe {
-        width: 90%;
-        height: 700px;
-    }
-
-    /* Footer */
-    .bordure3 h5 {
-        font-size: 3em !important;
-    }
-
-    .rs {
-        margin-left: 35% !important;
-    }
-}
-
-/* Mobiles (max-width: 768px) */
 @media screen and (max-width: 600px) {
 
-    /* Titre du projet */
-    .titreprojet {
-        flex-direction: column;
-        align-items: center;
-    margin-top: 2%;
-
-    }
-
-    .titreprojet img {
-        height: 15em;
-        opacity: 0.3;
-    }
-
-    .titreprojet h1 {
-        font-size: 3rem !important;
-    }
-
-    .titre_text {
-        position: relative;
-        width: 100%;
-        height: auto;
-        left: 0;
-        top: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: -10em;
-        z-index: 3;
-    }
-
-    .titre_text .button {
-        position: relative;
-        padding: 4% 4% !important;
-            margin-top: -10% ;
-    }
-
-    /* Description */
-    .description {
-        padding: 5% 3% !important;
-        margin-top: 5%;
-    }
-
-    .description p {
-                font-size: 1.1rem;
-        text-align: justify;
-    }
-
-    /* Etapes et compétences */
-    .etapesetcompé {
-        padding: 5% 5%;
-        gap: 20PX;
-            display: flex;
+  .titreprojet {
     flex-direction: column;
-    align-items: start;
-    padding: 1%;
+    align-items: center;
+    margin-top: 2%;
+  }
+
+  .titreprojet img {
+    height: 15em;
+    opacity: 0.3;
+  }
+
+  .titreprojet h1 {
+    font-size: 2.6rem;
+  }
+
+  .titre_text {
     position: relative;
-    }
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -9em;
+  }
 
-    .etapes, .compétences {
-        width: 100%;
-        padding: 2% !important;
-    }
+  .titre_text .button {
+    position: relative;
+    padding: 4%;
+    margin-top: -10%;
+  }
 
-    .etapesetcompé ul {
-        font-size: 1.1rem;
-        margin-bottom: 2em;
-        padding-left: 8%;
-        padding-top: 5%;
-    }
+  .description {
+    padding: 5% 5%;
+    margin-top: 5%;
+  }
 
-    /* Outils */
-    .outils_card {
-        flex-direction: column;
-        align-items: flex-start;
+  .description p {
+    font-size: 1.05rem;
+    text-align: left;
+  }
 
-            padding: 1%;
-                margin-bottom: 10%;
-                margin-TOP: 5%;
-           }
+  .etapesetcompé {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1% 6%;
+    gap: 1.5em;
+  }
 
-    .outils {
-        width: 100%;
-        padding: 2% !important;
-    }
+  .etapes,
+  .compétences {
+    width: 100%;
+    padding: 8% 6%;
+    transform: none;
+  }
 
-    .images_outils {
-        gap: 10%;
-        flex-wrap: wrap;
-        padding: 2% 5%;
-    }
+  .etapes:hover,
+  .compétences:hover {
+    transform: translate(-3px, -3px);
+  }
 
-    .outils_card img {
-        width: 4em;
-        height: 4em;
-    }
+  .etapesetcompé ul {
+    font-size: 1.05rem;
+    margin-bottom: 0.5em;
+    padding-left: 4%;
+    padding-top: 2%;
+  }
 
-    /* Iframe */
-    center iframe {
-        width: 95%;
-        height: 600px;
-    }
+  .outils_card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1% 6%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+  }
 
-    /* Footer */
-     H5 {
-        margin-bottom: 2%;
-    }
-    .bordure3 {
-        flex-direction: column;
-        column-count: 1;
-        text-align: center;
-        PADDING : 2em;
-    }
+  .outils {
+    width: 100%;
+    padding: 6%;
+  }
 
-    .bordure3 h5 {
-        font-size: 2.5em !important;
-        margin-TOP: 5%;
-        MARGIN-LEFT:0;
-        justify-content: center;
-    }
+  .images_outils {
+    gap: 6%;
+    padding: 2% 0;
+  }
 
-    .rs {
-        margin-left: 2% !important;
-    }
+  .outils_card img {
+    width: 3.5em;
+    height: 3.5em;
+  }
 
-    .mail {
-        height: 20%;
-        width: 90%;
-        margin-left: 6%;
-    }
-    .mail p {
-        font-size: 1em !important;
-        margin-left: 12.5%;
-    }
+  h5 {
+    margin-bottom: 2%;
+  }
+
+  .bordure3 {
+    flex-direction: column;
+    column-count: 1;
+    text-align: center;
+    padding: 2em;
+  }
+
+  .bordure3 h5 {
+    font-size: 2.2em;
+    margin-top: 5%;
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .rs {
+    margin-left: 2%;
+  }
+
+  .mail {
+    height: 20%;
+    width: 90%;
+    margin-left: 6%;
+  }
+
+  .mail p {
+    font-size: 1em;
+    margin-left: 12.5%;
+  }
 }
 
+/* Petits mobiles (360px et moins — iPhone SE, Android compacts) */
+@media screen and (max-width: 380px) {
+
+  .titreprojet img {
+    height: 12em;
+  }
+
+  .titreprojet h1 {
+    font-size: 2rem;
+  }
+
+  .titre_text {
+    margin-top: -7em;
+  }
+
+  .titre_text .button {
+    font-size: 0.75rem;
+    padding: 10px 20px !important;
+    margin-top: -15%;
+  }
+
+  .description {
+    padding: 6% 4%;
+  }
+
+  .description p {
+    font-size: 0.95rem;
+  }
+
+  .description p:first-of-type::first-letter {
+    font-size: 2.2rem;
+  }
+
+  .etapesetcompé {
+    padding: 0 5%;
+    gap: 1em;
+  }
+
+  .etapes,
+  .compétences,
+  .outils {
+    padding: 8% 6%;
+    border-radius: 20px;
+  }
+
+  .etapes h2,
+  .compétences h2,
+  .outils h2 {
+    font-size: 1.4rem;
+  }
+
+  .etapesetcompé ul {
+    font-size: 0.9rem;
+    padding-left: 2%;
+  }
+
+  .outils_card {
+    padding: 0 5%;
+    margin-top: 4%;
+    margin-bottom: 8%;
+  }
+
+  .images_outils {
+    gap: 4%;
+    justify-content: center;
+  }
+
+  .outils_card img {
+    width: 3em;
+    height: 3em;
+  }
+
+  center iframe {
+    width: 100%;
+    height: 380px;
+  }
+
+  .bordure3 h5 {
+    font-size: 1.8em !important;
+  }
+
+  .mail {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .mail p {
+    font-size: 0.85em !important;
+    margin-left: 5%;
+  }
+}

@@ -3,7 +3,7 @@ const projetData = {
     "color" : "#ad658b79",
     "cover": "magicball",
     "name": "MagicBall",
-    "categorie": "Intégration",
+    "categorie": "Développement Web",
     "contexte": "Dans le cadre de ma formation en BUT MMI, j’ai développé une application web dédiée à la gestion d'une collection de Pokémon.",
     "objectifs": "L’objectif était de concevoir une interface personnalisée permettant à un utilisateur unique de consulter et d'organiser l'ensemble de sa collection de manière fluide.",
     "etapes": ["Conception d'une planche univers", "Réalisation d'une maquette en version papier", "Création d’une maquette numérique", "Production du site en HTML / CSS / JS"],
@@ -123,6 +123,22 @@ const projetData = {
     "outils": ["pinterest", "blender"],
     "prototype": "projet/3D.mp4",
   },
-
+  9: {
+    "color" : "#ce00188a",
+      "cover": "t&b",
+    "name": "Refonte du site T&B",
+    "categorie": "UX/UI Design",
+    "contexte": "Lors de mon stage universitaire chez Tirard & Burgaud, j’ai piloté la refonte complète de leur site internet. J’ai conçu de nouvelles maquettes ergonomiques pour améliorer l’accessibilité et l’expérience utilisateur, tout en renforçant l’identité visuelle par la création de pictogrammes dédiés. ",
+    "objectifs": "L’objectif principal était d’adapter la navigation aux attentes des différentes cibles, en simplifiant l’accès rapide aux services et en rendant le contenu plus didactique et intuitif.",
+    "etapes": ["Réalisation de l'architecture de l'information", 
+      "Proposition de nouvelles mises en page via des zonings", 
+      "Mise en place des wireframes", 
+      "Création de pictogrammes et changement de couleurs",
+    "Réalisations de maquettes numérique" ],
+    "soft_skills": ["Autonomie", "Travail d'équipe", "Esprit critique", "Argumentation"],
+    "hard_skills": ["Recherche et analyse", "UX/UI Design", "Wireframing", "Maquette numérique", "Graphisme", "Prototypage"],
+    "outils": ["affinity", "figma"],
+    "prototype": "projet/proto.pdf",
+  },
 
 }
